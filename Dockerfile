@@ -1,5 +1,5 @@
 
-FROM openjdk:17
+FROM openjdk:11
 WORKDIR /app
 COPY --from=builder /app/target/TraineeDetails-1.0.0.jar .
 EXPOSE 8080
