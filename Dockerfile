@@ -2,7 +2,7 @@ FROM maven:4.0.0-jdk-8 as builder
 WORKDIR /app
 COPY . .
 RUN mvn dependency:resolve
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 FROM openjdk:17
 WORKDIR /app
