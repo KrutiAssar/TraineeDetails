@@ -1,4 +1,4 @@
-FROM maven:4.0.0-jdk-8 as builder
+FROM maven:3.8.4-jdk-17 as builder
 WORKDIR /app
 COPY . .
 RUN mvn dependency:resolve
