@@ -1,6 +1,6 @@
 
 FROM openjdk:11
 WORKDIR /app
-COPY --from=builder /app/target/TraineeDetails-1.0.0.jar .
+COPY ./target/TraineeDetails-1.0.0.jar /app
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "TraineeDetails-1.0.0.jar"]
