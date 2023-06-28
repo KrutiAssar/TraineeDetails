@@ -15,8 +15,8 @@
 	<name>TraineeDetails</name>
 	<description>Student Database Trainee Details Service</description>
 	<properties>
-		<java.version>11</java.version>
-		 <maven.compiler.release>11</maven.compiler.release>
+		<java.version>17</java.version>
+		 <maven.compiler.release>17</maven.compiler.release>
 	</properties>
 	<dependencies>
 		<dependency>
