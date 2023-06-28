@@ -1,0 +1,36 @@
+spring:
+  mvc:
+    throw-exception-if-no-handler: true
+  web:   
+    resources: 
+      add-mappings: false
+      
+  datasource:
+    #url: jdbc:h2:mem:test;MODE=PostgreSQL;INIT=CREATE SCHEMA IF NOT EXISTS student
+    url: jdbc:postgresql://34.96.209.61:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show-sql: true
+        format-sql: true
+
+  profiles:
+    active: dev
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /student-assessment-tracker/trainee-details
+    
+
+logging:
+  level:
+    com.pbma.ngo: debug
+    
+    

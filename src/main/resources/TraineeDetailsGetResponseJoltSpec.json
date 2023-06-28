@@ -1,0 +1,43 @@
+[
+	{
+		"operation": "shift",
+		"spec": {
+			"traineeId": "trainee.traineeId",
+			"salutation": "trainee.salutation",
+			"nameOfTrainee": "trainee.nameOfTrainee",
+			"dateOfBirth": "trainee.dateOfBirth",
+			"gender": "trainee.gender",
+			"maritalStatus": "trainee.maritalStatus",
+			"casteCategory": "trainee.casteCategory",
+			"highestEducationLevel": "trainee.highestEducationLevel",
+			"currentlyPursuingEducation": "trainee.currentlyPursuingEducation",
+			"nameOfEducationalInstitute": "trainee.nameOfEducationalInstitute",
+			"technicalEducation": "trainee.technicalEducation",				
+			"guardianType": "trainee.guardianType",
+			"nameOfGuardian": "trainee.nameOfGuardian",
+			"numberOfFamilyMembers": "trainee.numberOfFamilyMembers",
+			"familyEconomicStatus": "trainee.familyEconomicStatus",
+			"sourceOfHouseholdIncome": "trainee.sourceOfHouseholdIncome",
+			"traineeAnnualIncome": "trainee.traineeAnnualIncome",
+			"annualHouseholdIncome": "trainee.annualHouseholdIncome",
+			"typeOfIdentification": "trainee.identificationDetails.typeOfIdentification",
+			"aadharNumber": "trainee.identificationDetails.aadharNumber",
+			"panNumber": "trainee.identificationDetails.panNumber",
+			"voterIdNumber": "trainee.identificationDetails.voterIdNumber",
+			"mobileNumber": "trainee.identificationDetails.mobileNumber",
+			"alternateContactNumber": "trainee.identificationDetails.alternateContactNumber",
+			"guardianContactNumber": "trainee.identificationDetails.guardianContactNumber",
+			"emailId": "trainee.identificationDetails.emailId",
+			"traineeAddress": "trainee.identificationDetails.traineeAddress",
+			"district": "trainee.identificationDetails.district",
+			"state": "trainee.identificationDetails.state",
+			"pincode": "trainee.identificationDetails.pincode",
+			"typeOfDisability": "trainee.disabilityDetails.typeOfDisability",
+			"pwdCertificate": "trainee.disabilityDetails.pwdCertificate",
+			"mobilisationTechnique": "trainee.preTrainingDetails.mobilisationTechnique",
+			"preJoiningCounselling": "trainee.preTrainingDetails.preJoiningCounselling",
+			"preTrainingEmploymentStatus": "trainee.preTrainingDetails.preTrainingEmploymentStatus",
+			"currentEmploymentStatus": "trainee.preTrainingDetails.currentEmploymentStatus"
+		}
+	}
+]

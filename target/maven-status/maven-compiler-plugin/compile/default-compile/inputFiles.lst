@@ -1,0 +1,12 @@
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/service/TraineeDetailsService.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/entity/Trainee.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/config/ApplicationYaml.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/util/TraineeDetailsUtils.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/service/TraineeDetailsServiceImpl.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/config/TraineeDetailsConfig.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/exception/TraineeDetailsException.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/controller/TraineeDetailsControllerAdvice.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/util/Constants.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/repository/TraineeRepository.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/controller/TraineeDetailsController.java
+/home/kruti/git/TraineeDetails/src/main/java/com/pbma/ngo/TraineeDetailsApplication.java
