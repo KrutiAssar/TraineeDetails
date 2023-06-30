@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,7 @@ public class TraineeDetailsController {
 
 	private static final Logger traineeDetailsLogger = LoggerFactory.getLogger(TraineeDetailsController.class);
 
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@PostMapping(value = "/trainees", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> addTraineeDetails(@RequestBody String traineeDetailsRequest) throws Exception {
 		traineeDetailsLogger.info("Received request to Add Trainee Details");
@@ -29,6 +31,7 @@ public class TraineeDetailsController {
 		return responseEntity;
 	}
 
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping(value = "/trainees/{traineeId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> viewTraineeDetails(@PathVariable("traineeId") Long traineeId) throws Exception {
 		traineeDetailsLogger.info("Received request to View Trainee Details");
@@ -37,6 +40,7 @@ public class TraineeDetailsController {
 		return responseEntity;
 	}
 
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping(value = "/trainees", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> viewAllTraineeDetails() throws Exception {
 		traineeDetailsLogger.info("Received request to View All Trainee Details");
