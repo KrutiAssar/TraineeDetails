@@ -34,4 +34,3 @@ logging:
   level:
     com.pbma.ngo: debug
     
-    
