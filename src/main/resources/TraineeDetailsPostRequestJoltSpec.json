@@ -1,0 +1,50 @@
+[
+	{
+		"operation": "shift",
+		"spec": {
+			"trainee": {
+				"salutation": "salutation",
+				"nameOfTrainee": "nameOfTrainee",
+				"dateOfBirth": "dateOfBirth",
+				"gender": "gender",
+				"maritalStatus": "maritalStatus",
+				"casteCategory": "casteCategory",
+				"highestEducationLevel": "highestEducationLevel",
+				"currentlyPursuingEducation": "currentlyPursuingEducation",
+				"nameOfEducationalInstitute": "nameOfEducationalInstitute",
+				"technicalEducation": "technicalEducation",
+				"guardianType": "guardianType",
+				"nameOfGuardian": "nameOfGuardian",
+				"numberOfFamilyMembers": "numberOfFamilyMembers",
+				"familyEconomicStatus": "familyEconomicStatus",
+				"sourceOfHouseholdIncome": "sourceOfHouseholdIncome",
+				"traineeAnnualIncome": "traineeAnnualIncome",
+				"annualHouseholdIncome": "annualHouseholdIncome",
+				"identificationDetails": {
+					"typeOfIdentification": "typeOfIdentification",
+					"aadharNumber": "aadharNumber",
+					"panNumber": "panNumber",
+					"voterIdNumber": "voterIdNumber",
+					"mobileNumber": "mobileNumber",
+					"alternateContactNumber": "alternateContactNumber",
+					"guardianContactNumber": "guardianContactNumber",
+					"emailId": "emailId",
+					"traineeAddress": "traineeAddress",
+					"district": "district",
+					"state": "state",
+					"pincode": "pincode"
+				},
+				"disabilityDetails": {
+					"typeOfDisability": "typeOfDisability",
+					"pwdCertificate": "pwdCertificate"
+				},
+				"preTrainingDetails": {
+					"mobilisationTechnique": "mobilisationTechnique",
+					"preJoiningCounselling": "preJoiningCounselling",
+					"preTrainingEmploymentStatus": "preTrainingEmploymentStatus",
+					"currentEmploymentStatus": "currentEmploymentStatus"
+				}
+			}
+		}
+	}
+]

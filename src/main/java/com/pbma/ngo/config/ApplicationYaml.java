@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 import lombok.Data;
 
-
 @Configuration
 @ConfigurationProperties("app")
 @Data
@@ -15,9 +14,10 @@ public class ApplicationYaml {
 
 	@Data
 	public static class Jolt {
-		private String traineeDetailsRequestJoltSpec;
+		private String traineeDetailsPostRequestJoltSpec;
 		private String traineeDetailsGetResponseJoltSpec;
 		private String traineeDetailsPostResponseJoltSpec;
+		private String traineeDetailsPutRequestJoltSpec;
 	}
-	
+
 }

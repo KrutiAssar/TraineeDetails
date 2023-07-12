@@ -9,8 +9,10 @@ spring:
     #url: jdbc:h2:mem:test;MODE=PostgreSQL;INIT=CREATE SCHEMA IF NOT EXISTS student
     #url: jdbc:postgresql://34.96.209.61:5432/postgres
     url: jdbc:postgresql://34.96.209.61:5432/postgres?cloudSqlInstance=hsbc-greensavers-sams-dev:asia-east2:postgres&socketFactory=com.google.cloud.sql.postgres.SocketFactory&useSSL=false
-    username: postgres
-    password: postgres
+    username: postgresUserCrud
+    password: postgresUserCrud
+    #username: postgres
+    #password: postgres
   jpa:
     open-in-view: false
     properties:
@@ -27,7 +29,7 @@ spring:
 server:
   port: 8080
   servlet:
-    context-path: /student-assessment-tracker/trainee-details
+    context-path: /student-assessment-management/trainee-details
     
 
 logging:

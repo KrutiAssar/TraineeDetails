@@ -13,20 +13,25 @@ public class TraineeDetailsConfig {
 
 	@Autowired
 	private ApplicationYaml applicationYaml;
-	
+
 	@Bean
-	public List<Object> getTraineeDetailsRequestJoltSpec() {
-		return JsonUtils.classpathToList(applicationYaml.getJolt().getTraineeDetailsRequestJoltSpec());
+	public List<Object> getTraineeDetailsPostRequestJoltSpec() {
+		return JsonUtils.classpathToList(applicationYaml.getJolt().getTraineeDetailsPostRequestJoltSpec());
 	}
-	
+
 	@Bean
 	public List<Object> getTraineeDetailsGetResponseJoltSpec() {
 		return JsonUtils.classpathToList(applicationYaml.getJolt().getTraineeDetailsGetResponseJoltSpec());
 	}
-	
+
 	@Bean
 	public List<Object> getTraineeDetailsPostResponseJoltSpec() {
 		return JsonUtils.classpathToList(applicationYaml.getJolt().getTraineeDetailsPostResponseJoltSpec());
 	}
-	
+
+	@Bean
+	public List<Object> getTraineeDetailsPutRequestJoltSpec() {
+		return JsonUtils.classpathToList(applicationYaml.getJolt().getTraineeDetailsPutRequestJoltSpec());
+	}
+
 }

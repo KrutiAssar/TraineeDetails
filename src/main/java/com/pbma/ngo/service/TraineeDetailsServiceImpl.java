@@ -27,15 +27,14 @@ public class TraineeDetailsServiceImpl implements TraineeDetailsService {
 	@Autowired
 	private TraineeRepository traineeRepository;
 
-	private static final Logger traineeDetailsLogger = LoggerFactory
-			.getLogger(TraineeDetailsServiceImpl.class);
+	private static final Logger traineeDetailsLogger = LoggerFactory.getLogger(TraineeDetailsServiceImpl.class);
 
 	@Override
 	public ResponseEntity<String> saveTraineeDetails(String traineeDetailsRequest) throws Exception {
 
 		// jolt for request json - flatten to map to entity
 		String transformedTraineeRequest = TraineeDetailsUtils.transformRequest(traineeDetailsRequest,
-				traineeDetailsConfig.getTraineeDetailsRequestJoltSpec());
+				traineeDetailsConfig.getTraineeDetailsPostRequestJoltSpec());
 		traineeDetailsLogger.debug("Save Trainee Details transformed request : {}", transformedTraineeRequest);
 
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -95,4 +94,29 @@ public class TraineeDetailsServiceImpl implements TraineeDetailsService {
 		return new ResponseEntity<String>(response, HttpStatus.OK);
 
 	}
+
+	@Override
+	public ResponseEntity<String> updateTraineeDetails(final long traineeId, String traineeDetailsRequest)
+			throws Exception {
+
+		// add trainee id received as uri param in request body
+		JSONObject traineeDetailsRequestJsonObject = new JSONObject(traineeDetailsRequest);
+		traineeDetailsRequestJsonObject.getJSONObject(Constants.TRAINEE).put(Constants.TRAINEE_ID, traineeId);
+
+		// create update request and save details
+		String transformedTraineeRequest = TraineeDetailsUtils.transformRequest(
+				traineeDetailsRequestJsonObject.toString(Constants.JSON_OBJECT_INDENTATION_FACTOR),
+				traineeDetailsConfig.getTraineeDetailsPutRequestJoltSpec());
+		traineeDetailsLogger.debug("Update Trainee Details transformed request : {}", transformedTraineeRequest);
+
+		ObjectMapper objectMapper = new ObjectMapper();
+		Trainee requestTraineeObject = objectMapper.readValue(transformedTraineeRequest, Trainee.class);
+		Trainee trainee = traineeRepository.save(requestTraineeObject);
+		traineeDetailsLogger.info("Trainee Details updated in database successfully");
+
+		// retrieve updated details from database
+		String response = this.getTraineeDetails(traineeId).getBody();
+		return new ResponseEntity<String>(response, HttpStatus.OK);
+	}
+
 }
