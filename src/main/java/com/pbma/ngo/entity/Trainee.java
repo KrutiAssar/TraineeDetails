@@ -1,5 +1,8 @@
 package com.pbma.ngo.entity;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 //import jakarta.persistence.Column;
 //import jakarta.persistence.Entity;
 //import jakarta.persistence.GeneratedValue;
@@ -33,7 +36,7 @@ public class Trainee {
 	private String nameOfTrainee;
 
 	@Column(name = "date_of_birth")
-	private String dateOfBirth;
+	private Date dateOfBirth;
 
 	@Column(name = "gender")
 	private String gender;
@@ -130,5 +133,11 @@ public class Trainee {
 
 	@Column(name = "current_employment_status")
 	private String currentEmploymentStatus;
+
+	@Column(name = "creation_date")
+	private Timestamp creationDate;
+	
+	@Column(name = "last_update_timestamp")
+	private Timestamp lastUpdateTimestamp;
 
 }
