@@ -44,7 +44,9 @@
 					"preJoiningCounselling": "preJoiningCounselling",
 					"preTrainingEmploymentStatus": "preTrainingEmploymentStatus",
 					"currentEmploymentStatus": "currentEmploymentStatus"
-				}
+				},
+				"creationTimestamp": "creationTimestamp",
+				"lastUpdateTimestamp": "lastUpdateTimestamp"
 			}
 		}
 	}

@@ -37,7 +37,9 @@
 			"mobilisationTechnique": "trainee.preTrainingDetails.mobilisationTechnique",
 			"preJoiningCounselling": "trainee.preTrainingDetails.preJoiningCounselling",
 			"preTrainingEmploymentStatus": "trainee.preTrainingDetails.preTrainingEmploymentStatus",
-			"currentEmploymentStatus": "trainee.preTrainingDetails.currentEmploymentStatus"
+			"currentEmploymentStatus": "trainee.preTrainingDetails.currentEmploymentStatus",
+			"creationTimestamp": "trainee.creationTimestamp",
+			"lastUpdateTimestamp": "trainee.lastUpdateTimestamp"
 		}
 	}
 ]

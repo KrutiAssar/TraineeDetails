@@ -1,6 +1,5 @@
 package com.pbma.ngo.service;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.List;
@@ -47,14 +46,8 @@ public class TraineeDetailsServiceImpl implements TraineeDetailsService {
 		calendar.clear(Calendar.ZONE_OFFSET);
 
 		Timestamp timestamp = new Timestamp(calendar.getTimeInMillis());
-		requestTraineeObject.setCreationDate(timestamp);
+		requestTraineeObject.setCreationTimestamp(timestamp);
 		requestTraineeObject.setLastUpdateTimestamp(timestamp);
-
-//		calendar.setTime(requestTraineeObject.getDateOfBirth());
-//		calendar.clear(Calendar.ZONE_OFFSET);
-//		requestTraineeObject.setDateOfBirth(new Date(calendar.getTimeInMillis()));
-//		System.err.println(new Date(calendar.getTimeInMillis()));
-//		System.err.println(timestamp);
 
 		Trainee trainee = traineeRepository.save(requestTraineeObject);
 		traineeDetailsLogger.info("Trainee Details inserted in database successfully");
@@ -134,7 +127,7 @@ public class TraineeDetailsServiceImpl implements TraineeDetailsService {
 		Timestamp timestamp = new Timestamp(calendar.getTimeInMillis());
 		requestTraineeObject.setLastUpdateTimestamp(timestamp);
 
-		Trainee trainee = traineeRepository.save(requestTraineeObject);
+		traineeRepository.save(requestTraineeObject);
 		traineeDetailsLogger.info("Trainee Details updated in database successfully");
 
 		// retrieve updated details from database

@@ -17,6 +17,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.pbma.ngo.util.Constants;
+
 import lombok.Data;
 
 @Data
@@ -35,6 +38,7 @@ public class Trainee {
 	@Column(name = "name_of_trainee")
 	private String nameOfTrainee;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Constants.DATE_PATTERN)
 	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
 
@@ -134,9 +138,11 @@ public class Trainee {
 	@Column(name = "current_employment_status")
 	private String currentEmploymentStatus;
 
-	@Column(name = "creation_date")
-	private Timestamp creationDate;
-	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Constants.TIMESTAMP_PATTERN, timezone = Constants.TIMEZONE_ASIA)
+	@Column(name = "creation_timestamp")
+	private Timestamp creationTimestamp;
+
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Constants.TIMESTAMP_PATTERN, timezone = Constants.TIMEZONE_ASIA)
 	@Column(name = "last_update_timestamp")
 	private Timestamp lastUpdateTimestamp;
 
