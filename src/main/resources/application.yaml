@@ -8,11 +8,14 @@ spring:
   datasource:
     #url: jdbc:h2:mem:test;MODE=PostgreSQL;INIT=CREATE SCHEMA IF NOT EXISTS student
     #url: jdbc:postgresql://34.96.209.61:5432/postgres
-    url: jdbc:postgresql://34.96.209.61:5432/postgres?cloudSqlInstance=hsbc-greensavers-sams-dev:asia-east2:postgres&socketFactory=com.google.cloud.sql.postgres.SocketFactory&useSSL=false
-    username: postgresUserCrud
-    password: postgresUserCrud
+    #url: jdbc:postgresql://34.96.209.61:5432/postgres?cloudSqlInstance=hsbc-greensavers-sams-dev:asia-east2:postgres&socketFactory=com.google.cloud.sql.postgres.SocketFactory&useSSL=false 
+    #username: postgresUserCrud
+    #password: postgresUserCrud
     #username: postgres
     #password: postgres
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?cloudSqlInstance=${INSTANCE_CONNECTION_NAME}&socketFactory=com.google.cloud.sql.postgres.SocketFactory&useSSL=false
+    username: ${DB_USER}
+    password: ${DB_PASS}
   jpa:
     open-in-view: false
     properties:
