@@ -41,5 +41,17 @@
 			"creationTimestamp": "trainee.creationTimestamp",
 			"lastUpdateTimestamp": "trainee.lastUpdateTimestamp"
 		}
+	},
+	{
+		"operation": "default",
+		"spec": {
+			"trainee": {
+				"implementingPartnerDetails" : {
+					"partnerName": "PBMA",
+					"centreAddress": "Techinical Training Institute of The Poona Blind Men's Association, 109, Dr.Helen Keller road, Ramtekdi, Hadapsar-411013",
+					"centreLocation": "Pune" 
+				}
+			}	
+		}
 	}
 ]
