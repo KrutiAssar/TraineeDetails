@@ -135,4 +135,60 @@ public class TraineeDetailsServiceImpl implements TraineeDetailsService {
 		return new ResponseEntity<String>(response, HttpStatus.OK);
 	}
 
+	@Override
+	public ResponseEntity<String> getTraineeDetailsByIdentification(String typeOfIdentification,
+			String identificationDocumentNumber) throws Exception {
+
+		Trainee trainee = null;
+		String traineeByIdentificationResponse = null;
+
+		switch (typeOfIdentification) {
+		case Constants.AADHAR_NUMBER:
+			trainee = traineeRepository.findByAadharNumber(identificationDocumentNumber);
+			break;
+		case Constants.PAN_NUMBER:
+			trainee = traineeRepository.findByPanNumber(identificationDocumentNumber);
+			break;
+		case Constants.VOTER_ID_NUMBER:
+			trainee = traineeRepository.findByVoterIdNumber(identificationDocumentNumber);
+			break;
+		case Constants.MOBILE_NUMBER:
+			trainee = traineeRepository.findByMobileNumber(identificationDocumentNumber);
+			break;
+		default:
+			break;
+
+		}
+
+		if (trainee == null) {
+			traineeDetailsLogger.info(
+					"Trainee Details not found in database for type of identification : {} and identification document number : {}",
+					typeOfIdentification, identificationDocumentNumber);
+			JSONObject responseJsonObject = new JSONObject();
+			responseJsonObject.put(Constants.RESPONSE_CODE, Constants.RESPONSE_CODE_NOT_FOUND);
+			traineeByIdentificationResponse = responseJsonObject.toString(Constants.JSON_OBJECT_INDENTATION_FACTOR);
+
+		} else {
+
+			traineeDetailsLogger.info("Trainee Details retrieved from database successfully");
+
+			String traineeResponse = new JSONObject(trainee).toString(Constants.JSON_OBJECT_INDENTATION_FACTOR);
+
+			String response = new JSONObject(TraineeDetailsUtils.transformRequest(traineeResponse,
+					traineeDetailsConfig.getTraineeDetailsGetResponseJoltSpec()))
+					.toString(Constants.JSON_OBJECT_INDENTATION_FACTOR);
+			traineeDetailsLogger.debug("Get Trainee Details transformed response : {}", response);
+
+			JSONObject responseJsonObject = new JSONObject();
+			responseJsonObject.put(Constants.RESPONSE_CODE, Constants.RESPONSE_CODE_RECORD_FOUND);
+			responseJsonObject.put(Constants.TRAINEE, new JSONObject(response).getJSONObject(Constants.TRAINEE));
+
+			traineeByIdentificationResponse = responseJsonObject.toString(Constants.JSON_OBJECT_INDENTATION_FACTOR);
+		}
+		
+		traineeDetailsLogger.debug("Get Trainee Details by Identification final response : {}",
+				traineeByIdentificationResponse);
+		return new ResponseEntity<String>(traineeByIdentificationResponse, HttpStatus.OK);
+
+	}
 }
