@@ -20,6 +20,9 @@
 				"sourceOfHouseholdIncome": "sourceOfHouseholdIncome",
 				"traineeAnnualIncome": "traineeAnnualIncome",
 				"annualHouseholdIncome": "annualHouseholdIncome",
+				"partnerId": "partnerId",
+				"recordType": "recordType",
+				"originalTraineeId": "originalTraineeId",
 				"identificationDetails": {
 					"typeOfIdentification": "typeOfIdentification",
 					"aadharNumber": "aadharNumber",

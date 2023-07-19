@@ -39,7 +39,10 @@
 			"preTrainingEmploymentStatus": "trainee.preTrainingDetails.preTrainingEmploymentStatus",
 			"currentEmploymentStatus": "trainee.preTrainingDetails.currentEmploymentStatus",
 			"creationTimestamp": "trainee.creationTimestamp",
-			"lastUpdateTimestamp": "trainee.lastUpdateTimestamp"
+			"lastUpdateTimestamp": "trainee.lastUpdateTimestamp",
+			"partnerId": "trainee.partnerId",
+			"recordType": "trainee.recordType",
+			"originalTraineeId": "trainee.originalTraineeId"
 		}
 	},
 	{

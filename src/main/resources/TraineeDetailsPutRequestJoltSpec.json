@@ -46,7 +46,10 @@
 					"currentEmploymentStatus": "currentEmploymentStatus"
 				},
 				"creationTimestamp": "creationTimestamp",
-				"lastUpdateTimestamp": "lastUpdateTimestamp"
+				"lastUpdateTimestamp": "lastUpdateTimestamp",
+				"partnerId": "partnerId",
+				"recordType": "recordType",
+				"originalTraineeId": "originalTraineeId"
 			}
 		}
 	}

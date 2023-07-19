@@ -146,4 +146,13 @@ public class Trainee {
 	@Column(name = "last_update_timestamp")
 	private Timestamp lastUpdateTimestamp;
 
+	@Column(name = "partner_id")
+	private Integer partnerId;
+
+	@Column(name = "record_type")
+	private String recordType;
+
+	@Column(name = "original_trainee_id")
+	private String originalTraineeId;
+
 }
